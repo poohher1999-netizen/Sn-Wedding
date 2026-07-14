@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>SETTHASAK ♥ NATKAMON — Wedding</title>
+<title>Wedding note by mhee</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Marcellus&family=Anuphan:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -926,6 +926,8 @@ function show(view){
   $('#presView').classList.toggle('hidden', view!=='pres');
   $('#editView').classList.toggle('active', view==='edit');
   $('#editTotalBar').classList.toggle('show', view==='edit');
+  document.title = view==='landing' ? 'Wedding note by mhee'
+    : `${D.settings.groom||''} ♥ ${D.settings.bride||''} — Wedding note by mhee`;
   scrollTo(0,0);
 }
 function openEdit(){ show('edit'); renderEdit(); }
